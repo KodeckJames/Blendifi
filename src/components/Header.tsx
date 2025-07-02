@@ -4,18 +4,18 @@ import Image from "next/image"
 
 export default function HeaderSection() {
   return (
-      <nav>
+      <nav className=" bg-slate-200 dark:bg-cyan-900 flex justify-between">
           <Link href={'/'} className=" flex justify-between">
               <Image src={'/images/blendify_logo.png'} alt="blendify_logo" height={40} width={40} />
               <h1 className=" font-extrabold text-lg text-blue-600 hover:shadow-purple-500">
                   Blendify
               </h1>
           </Link>          
-          <Link href={'/swap'} className=" text-gray-600 active:text-blue-600 font-semibold">Swap</Link>
-          <Link href={'/supply'} className=" text-gray-600 active:text-blue-600 font-semibold">supply</Link>
-          <Link href={'/borrow'} className=" text-gray-600 active:text-blue-600 font-semibold">Borrow</Link>
-          <Link href={'/stake'} className=" text-gray-600 active:text-blue-600 font-semibold">Stake</Link>
-          <Link href={'/portfolio'} className=" text-gray-600 active:text-blue-600 font-semibold">portfolio</Link>
+          <Link href={'/swap'} className=" text-gray-600 active:text-blue-600 font-semibold dark:text-slate-100">Swap</Link>
+          <Link href={'/supply'} className=" text-gray-600 active:text-blue-600 font-semibold dark:text-slate-100">supply</Link>
+          <Link href={'/borrow'} className=" text-gray-600 active:text-blue-600 font-semibold dark:text-slate-100">Borrow</Link>
+          <Link href={'/stake'} className=" text-gray-600 active:text-blue-600 font-semibold dark:text-slate-100">Stake</Link>
+          <Link href={'/portfolio'} className=" text-gray-600 active:text-blue-600 font-semibold dark:text-slate-100">portfolio</Link>
     </nav>
   )
 }
