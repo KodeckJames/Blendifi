@@ -2,6 +2,8 @@
 import Link from "next/link"
 import Image from "next/image"
 import ThemeToggle from "./ThemeToggle"
+// Show example of a shadcn component import
+import { Button } from "./ui/button"
 
 export default function HeaderSection() {
   return (
@@ -11,7 +13,9 @@ export default function HeaderSection() {
               <h1 className=" font-extrabold text-lg text-blue-600 hover:shadow-purple-500">
                   Blendify
               </h1>
-          </Link>          
+          </Link>  
+         {/*Show example shadcn Usage of component  */}
+          <Button>Hello</Button>       
           <Link href={'/swap'} className=" text-gray-600 active:text-blue-600 font-semibold dark:text-slate-100">Swap</Link>
           <Link href={'/supply'} className=" text-gray-600 active:text-blue-600 font-semibold dark:text-slate-100">supply</Link>
           <Link href={'/borrow'} className=" text-gray-600 active:text-blue-600 font-semibold dark:text-slate-100">Borrow</Link>

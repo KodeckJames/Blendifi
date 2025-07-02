@@ -26,21 +26,21 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-        <body
-          className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-          >
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen`}
+      >
         <ThemeProvider
           attribute="class"
-                defaultTheme="light"
-                enableSystem
-                disableTransitionOnChange
-         >
-          <header>
-            <HeaderSection/>
-          </header>
-          <main className=" flex-1">{children}</main>
-      </ThemeProvider>
-        </body>
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <div className="min-h-screen bg-background text-foreground">
+            <HeaderSection />
+            <main className="container mx-auto px-4 py-8">{children}</main>
+          </div>
+        </ThemeProvider>
+      </body>
     </html>
   );
 }
