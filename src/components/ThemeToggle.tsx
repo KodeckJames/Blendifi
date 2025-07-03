@@ -25,9 +25,9 @@ function ThemeToggle() {
   return (
     <button onClick={() => toggleTheme()} className="m-1 p-2">
       {theme === "dark" ? (
-        <MoonIcon className="h-5 w-5" />
-      ) : (
         <SunIcon className="h-5 w-5" />
+      ) : (
+        <MoonIcon className="h-5 w-5" />
       )}
     </button>
   );

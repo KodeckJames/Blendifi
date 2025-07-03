@@ -2,25 +2,21 @@
 import Link from "next/link"
 import Image from "next/image"
 import ThemeToggle from "./ThemeToggle"
-// Show example of a shadcn component import
-import { Button } from "./ui/button"
 
 export default function HeaderSection() {
   return (
-      <nav className=" sticky top-0 z-50 shadow-2xl bg-slate-200 dark:bg-cyan-900 flex justify-between w-full">
+      <nav className=" sticky top-0 z-50 shadow-2xl bg-blue-100 dark:bg-gray-700 flex justify-around items-center">
           <Link href={'/'} className=" flex justify-between">
               <Image src={'/images/blendify_logo.png'} alt="blendify_logo" height={40} width={40} className=" rounded-full"/>
-              <h1 className=" font-extrabold text-lg text-blue-600 hover:shadow-purple-500">
+              <h1 className=" flex font-extrabold text-lg text-blue-600 hover:shadow-purple-500 items-center dark:text-blue-400">
                   Blendify
               </h1>
           </Link>  
-         {/*Show example shadcn Usage of component  */}
-          <Button>Hello</Button>       
-          <Link href={'/swap'} className=" text-gray-600 active:text-blue-600 font-semibold dark:text-slate-100">Swap</Link>
-          <Link href={'/supply'} className=" text-gray-600 active:text-blue-600 font-semibold dark:text-slate-100">supply</Link>
-          <Link href={'/borrow'} className=" text-gray-600 active:text-blue-600 font-semibold dark:text-slate-100">Borrow</Link>
-          <Link href={'/stake'} className=" text-gray-600 active:text-blue-600 font-semibold dark:text-slate-100">Stake</Link>
-          <Link href={'/portfolio'} className=" text-gray-600 active:text-blue-600 font-semibold dark:text-slate-100">portfolio</Link>
+          <Link href={'/swap'} className=" text-gray-600 active:text-blue-600 dark:text-slate-100">Swap</Link>
+          <Link href={'/supply'} className=" text-gray-600 active:text-blue-600 dark:text-slate-100">supply</Link>
+          <Link href={'/borrow'} className=" text-gray-600 active:text-blue-600 dark:text-slate-100">Borrow</Link>
+          <Link href={'/stake'} className=" text-gray-600 active:text-blue-600 dark:text-slate-100">Stake</Link>
+          <Link href={'/portfolio'} className=" text-gray-600 active:text-blue-600 dark:text-slate-100">portfolio</Link>
           <ThemeToggle/>
     </nav>
   )
