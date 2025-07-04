@@ -13,7 +13,7 @@ import { useTheme } from "next-themes";
 import { ShineBorder } from "@/components/magicui/shine-border";
 import SelectToken from "@/components/SelectTokens";
 
-export default function MagicCardDemo() {
+export default function SwapPage() {
   const { theme } = useTheme();
   return (
     <Card className="p-0 max-w-sm w-full shadow-none border-none">
