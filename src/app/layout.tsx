@@ -37,7 +37,7 @@ export default function RootLayout({
         >
           <div className="min-h-screen">
             <HeaderSection />
-            <main className=' flex justify-center items-center bg-gradient-to-br from-blue-100 via-blue-300 to-blue-500 min-h-screen dark:bg-gradient-to-bl dark:from-gray-700 dark:via-gray-900 dark:to-black'>{children}</main>
+            <main className='bg-gradient-to-br from-blue-100 via-blue-300 to-blue-500 min-h-screen dark:bg-gradient-to-bl dark:from-gray-700 dark:via-gray-900 dark:to-black'>{children}</main>
           </div>
         </ThemeProvider>
       </body>
