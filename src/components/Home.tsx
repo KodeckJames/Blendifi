@@ -7,29 +7,31 @@ import {
   Twitter,
 } from 'lucide-react'
 import Image from 'next/image'
+import { MarqueeSlide } from './ReviewCard'
+import { TypingAnimation } from "@/components/magicui/typing-animation";
 
 export default function HomePage() {
   return (
     <div className="  min-h-screen dark:bg-gradient-to-bl dark:from-blue-800 dark:via-blue-900 dark:to-gray-900">
-      <section className=" flex ml-10 ">
+      <section className=" flex pl-10 dark:bg-black ">
         <div className="">
           <h1 className=" mt-20 mb-0 font-extrabold text-5xl dark:text-white">
             A DeFi hub on {''}
             <AuroraText>Stellar</AuroraText>
           </h1>
           <h1
-            className=" text-4xl font-extrabold
+            className=" text-4xl font-extrabold dark:text-white
       "
           >
             That allows you to:
           </h1>
-          <MorphingText texts={['Swap', 'Supply', 'Borrow', 'Stake']} />
+          <MorphingText className=' dark:text-white' texts={['Swap', 'Supply', 'Borrow', 'Stake']} />
           <VelocityScroll
-            className=" text-xl max-w-90"
+            className=" text-xl max-w-96"
             defaultVelocity={3}
             numRows={1}
           >
-            XLM , BLND , USDC , wETH , wBTC ,
+            <span className=' text-pink-600'>XLM</span> , <span className=' text-green-600'>BLND</span> , <span className=' text-purple-600'>USDC</span> , <span className=' text-orange-600'>wETH</span> , <span className=' text-yellow-400'>wBTC</span> ,
           </VelocityScroll>
           <div className=" flex justify-between gap-20 mt-8">
             <RainbowButton className=" !bg-blue-600 dark:text-black p-6 rounded-full text-lg ">
@@ -43,10 +45,10 @@ export default function HomePage() {
       </section>
 
       {/* Features Section */}
-      <section id="features" className="py-20">
+      <section id="features" className="py-20 dark:bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 dark:text-white">
               Everything you need for DeFi
             </h2>
             <p className="text-xl text-gray-600 dark:text-gray-300">
@@ -102,7 +104,7 @@ export default function HomePage() {
         <section id="tokens" className="py-20 bg-gray-100 dark:bg-gray-800">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4 dark:text-white">
                 Supported Tokens
               </h2>
               <p className="text-xl text-gray-600 dark:text-gray-300">
@@ -122,7 +124,7 @@ export default function HomePage() {
                   <div className={`w-12 h-12 ${token.color} rounded-full flex items-center justify-center mb-4 mx-auto`}>
                     <span className="text-white font-bold text-sm">{token.name}</span>
                   </div>
-                  <h3 className="text-lg font-bold text-center mb-1">{token.fullName}</h3>
+                  <h3 className="text-lg font-bold text-center mb-1 dark:text-white">{token.fullName}</h3>
                   <div className="text-center">
                     <div className="text-xl font-bold text-green-600">{token.price}</div>
                     <div className="text-green-600 text-sm">{token.change}</div>
@@ -132,8 +134,13 @@ export default function HomePage() {
             </div>
           </div>
       </section>
+
+      <section className=' grid justify-items-center dark:bg-white bg-white'>
+        <TypingAnimation>Customer Reviews</TypingAnimation>
+        <MarqueeSlide/>
+      </section>
       
-      <footer id="about" className="bg-gray-900 dark:bg-black text-white py-16">
+      <footer id="about" className="dark:bg-black text-white py-16">
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid md:grid-cols-4 gap-8 mb-12">
             {/* Logo & Description */}
@@ -146,7 +153,7 @@ export default function HomePage() {
                   Blendify
                 </h1>
               </div>
-              <p className="text-gray-400 leading-relaxed">
+              <p className="text-black dark:text-white leading-relaxed">
                 Enabling Swaping, Supply, Borrowing and Staking of tokens seamlessly.
               </p>
             </div>
@@ -162,7 +169,7 @@ export default function HomePage() {
                 <li>
                   <a
                     href="#"
-                    className="text-gray-400 hover:text-pink-500 transition-colors"
+                    className="text-black dark:text-white transition-colors"
                   >
                     FAQs
                   </a>
@@ -170,7 +177,7 @@ export default function HomePage() {
                 <li>
                   <a
                     href="#"
-                    className="text-gray-400 hover:text-pink-500 transition-colors"
+                    className="text-black dark:text-white transition-colors"
                   >
                     Support
                   </a>
@@ -197,25 +204,25 @@ export default function HomePage() {
           </div>
 
           <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
-            <div className="text-gray-400 mb-4 md:mb-0">
+            <div className="text-black dark:text-white mb-4 md:mb-0">
               © 2025 Blendify. All rights reserved.
             </div>
             <div className="flex space-x-6">
               <a
                 href="#"
-                className="text-gray-400 hover:text-pink-500 transition-colors"
+                className="text-black dark:text-white transition-colors"
               >
                 Terms
               </a>
               <a
                 href="#"
-                className="text-gray-400 hover:text-pink-500 transition-colors"
+                className="text-black dark:text-white transition-colors"
               >
                 Privacy
               </a>
               <a
                 href="#"
-                className="text-gray-400 hover:text-pink-500 transition-colors"
+                className="text-black dark:text-white transition-colors"
               >
                 Cookies
               </a>
