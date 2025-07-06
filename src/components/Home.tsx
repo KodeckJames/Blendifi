@@ -1,11 +1,229 @@
 'use client'
+import { RainbowButton } from '@/components/magicui/rainbow-button'
+import { MorphingText } from '@/components/magicui/morphing-text'
+import { VelocityScroll } from '@/components/magicui/scroll-based-velocity'
+import { AuroraText } from '@/components/magicui/aurora-text'
+import {
+  Twitter,
+} from 'lucide-react'
+import Image from 'next/image'
 
 export default function HomePage() {
   return (
-    <div className=" flex flex-row">
-      <section className=" flex just">
-        <h1 className=" flex justify-center items-start">DeFi hub on Stellar</h1>
+    <div className="  min-h-screen dark:bg-gradient-to-bl dark:from-blue-800 dark:via-blue-900 dark:to-gray-900">
+      <section className=" flex ml-10 ">
+        <div className="">
+          <h1 className=" mt-20 mb-0 font-extrabold text-5xl dark:text-white">
+            A DeFi hub on {''}
+            <AuroraText>Stellar</AuroraText>
+          </h1>
+          <h1
+            className=" text-4xl font-extrabold
+      "
+          >
+            That allows you to:
+          </h1>
+          <MorphingText texts={['Swap', 'Supply', 'Borrow', 'Stake']} />
+          <VelocityScroll
+            className=" text-xl max-w-90"
+            defaultVelocity={3}
+            numRows={1}
+          >
+            XLM , BLND , USDC , wETH , wBTC ,
+          </VelocityScroll>
+          <div className=" flex justify-between gap-20 mt-8">
+            <RainbowButton className=" !bg-blue-600 dark:text-black p-6 rounded-full text-lg ">
+              Start Trading
+            </RainbowButton>
+            <RainbowButton className=" !bg-blue-600 dark:text-black p-6 rounded-full text-lg ">
+              View Portfolio
+            </RainbowButton>
+          </div>
+        </div>
       </section>
+
+      {/* Features Section */}
+      <section id="features" className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Everything you need for DeFi
+            </h2>
+            <p className="text-xl text-gray-600 dark:text-gray-300">
+              Experience the full power of decentralized finance
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="p-6 bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+              <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mb-4">
+                <span className="text-white text-xl">⇄</span>
+              </div>
+              <h3 className="text-xl font-bold mb-2">Swap</h3>
+              <p className="text-gray-600 dark:text-gray-300">
+                Instantly swap between supported tokens with minimal fees
+              </p>
+            </div>
+
+            <div className="p-6 bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+              <div className="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center mb-4">
+                <span className="text-white text-xl">+</span>
+              </div>
+              <h3 className="text-xl font-bold mb-2">Supply</h3>
+              <p className="text-gray-600 dark:text-gray-300">
+                Earn competitive yields by supplying tokens to liquidity pools
+              </p>
+            </div>
+
+            <div className="p-6 bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+              <div className="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mb-4">
+                <span className="text-white text-xl">↓</span>
+              </div>
+              <h3 className="text-xl font-bold mb-2">Borrow</h3>
+              <p className="text-gray-600 dark:text-gray-300">
+                Access instant liquidity by borrowing against your collateral
+              </p>
+            </div>
+
+            <div className="p-6 bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+              <div className="w-12 h-12 bg-orange-600 rounded-lg flex items-center justify-center mb-4">
+                <span className="text-white text-xl">★</span>
+              </div>
+              <h3 className="text-xl font-bold mb-2">Stake</h3>
+              <p className="text-gray-600 dark:text-gray-300">
+                Stake tokens to earn rewards and help secure the network
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Tokens Section */}
+        <section id="tokens" className="py-20 bg-gray-100 dark:bg-gray-800">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                Supported Tokens
+              </h2>
+              <p className="text-xl text-gray-600 dark:text-gray-300">
+                Trade with premium crypto assets
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
+              {[
+                { name: 'XLM', fullName: 'Stellar', price: '$0.12', change: '+2.5%', color: 'bg-blue-600' },
+                { name: 'BLND', fullName: 'Blend', price: '$1.85', change: '+5.2%', color: 'bg-purple-600' },
+                { name: 'USDC', fullName: 'USD Coin', price: '$1.00', change: '0.0%', color: 'bg-green-600' },
+                { name: 'wETH', fullName: 'Wrapped ETH', price: '$2,340', change: '+1.8%', color: 'bg-gray-600' },
+                { name: 'wBTC', fullName: 'Wrapped BTC', price: '$43,250', change: '+3.1%', color: 'bg-orange-600' }
+              ].map((token, index) => (
+                <div key={index} className="bg-white dark:bg-gray-900 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all hover:-translate-y-1">
+                  <div className={`w-12 h-12 ${token.color} rounded-full flex items-center justify-center mb-4 mx-auto`}>
+                    <span className="text-white font-bold text-sm">{token.name}</span>
+                  </div>
+                  <h3 className="text-lg font-bold text-center mb-1">{token.fullName}</h3>
+                  <div className="text-center">
+                    <div className="text-xl font-bold text-green-600">{token.price}</div>
+                    <div className="text-green-600 text-sm">{token.change}</div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+      </section>
+      
+      <footer id="about" className="bg-gray-900 dark:bg-black text-white py-16">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="grid md:grid-cols-4 gap-8 mb-12">
+            {/* Logo & Description */}
+            <div className="md:col-span-1">
+              <div className="flex items-center mb-4">
+                <div className="w-10 h-10 bg-pink-500 rounded-full flex items-center justify-center">
+                   <Image src={'/images/blendify_logo.png'} alt="blendify_logo" height={40} width={40} className=" rounded-full" quality={100}/>
+                </div>
+                <h1 className="ml-3 text-2xl font-bold text-blue-600">
+                  Blendify
+                </h1>
+              </div>
+              <p className="text-gray-400 leading-relaxed">
+                Enabling Swaping, Supply, Borrowing and Staking of tokens seamlessly.
+              </p>
+            </div>
+
+            
+            {/* Resources Links */}
+            <div>
+              <h4 className="text-lg font-semibold text-blue-600 mb-4">
+                Resources
+              </h4>
+              <ul className="space-y-2">
+               
+                <li>
+                  <a
+                    href="#"
+                    className="text-gray-400 hover:text-pink-500 transition-colors"
+                  >
+                    FAQs
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    className="text-gray-400 hover:text-pink-500 transition-colors"
+                  >
+                    Support
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            {/* Social Links */}
+            <div>
+              <h4 className="text-lg font-semibold text-blue-600 mb-4">
+                Connect With Us
+              </h4>
+              <div className="flex space-x-4">
+                <a
+                  href="https://x.com/Lady_Hygeia"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 bg-blue-600 hover:bg-pink-600 rounded-full flex items-center justify-center cursor-pointer transition-colors"
+                >
+                  <Twitter className="w-5 h-5" />
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+            <div className="text-gray-400 mb-4 md:mb-0">
+              © 2025 Blendify. All rights reserved.
+            </div>
+            <div className="flex space-x-6">
+              <a
+                href="#"
+                className="text-gray-400 hover:text-pink-500 transition-colors"
+              >
+                Terms
+              </a>
+              <a
+                href="#"
+                className="text-gray-400 hover:text-pink-500 transition-colors"
+              >
+                Privacy
+              </a>
+              <a
+                href="#"
+                className="text-gray-400 hover:text-pink-500 transition-colors"
+              >
+                Cookies
+              </a>
+            </div>
+          </div>
+        </div>
+      </footer>
+
     </div>
   )
 }
