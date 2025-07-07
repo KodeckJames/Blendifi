@@ -3,6 +3,7 @@ import Link from "next/link"
 import Image from "next/image"
 import ThemeToggle from "./ThemeToggle"
 import { Button } from "./ui/button"
+import { ScrollProgress } from "@/components/magicui/scroll-progress";
 
 export default function HeaderSection() {
   return (
@@ -24,6 +25,7 @@ export default function HeaderSection() {
               <Button className=" bg-blue-600 dark:bg-blue-400 hover:bg-blue-400">Connect Freighter</Button>
               <ThemeToggle />
           </div>
+          <ScrollProgress className=" top-15" />
     </nav>
   )
 }

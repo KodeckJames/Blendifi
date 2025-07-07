@@ -37,7 +37,7 @@ export default function RootLayout({
         >
           <div className="min-h-screen">
             <HeaderSection />
-            <main className='bg-gradient-to-br from-blue-100 via-blue-300 to-blue-500 min-h-screen dark:bg-black'>{children}</main>
+            <main className='light:bg-gradient-to-br from-blue-100 via-blue-300 to-blue-500 min-h-screen dark:bg-black'>{children}</main>
           </div>
         </ThemeProvider>
       </body>
