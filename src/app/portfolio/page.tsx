@@ -13,7 +13,7 @@ import { ShineBorder } from '@/components/magicui/shine-border'
 export default function PortfolioPage() {
   const { theme } = useTheme()
   return (
-    <div className=' flex  justify-center items-center min-h-screen'>
+    <div className=' flex dark:bg-black justify-center items-center min-h-screen'>
       <Card className="p-0 max-w-sm w-full shadow-none border-none">
         <MagicCard
           gradientColor={theme === 'dark' ? '#D9D9D955' : '#D9D9D955'}
