@@ -10,12 +10,20 @@ import Image from 'next/image'
 import { MarqueeSlide } from './ReviewCard'
 import { TypingAnimation } from "@/components/magicui/typing-animation";
 import { Globe } from "@/components/magicui/globe";
+import { cn } from "@/lib/utils";
+import { DotPattern } from "@/components/magicui/dot-pattern";
 
 export default function HomePage() {
   return (
     <div className="  min-h-screen dark:bg-gradient-to-bl dark:from-blue-800 dark:via-blue-900 dark:to-gray-900">
       <section className=" flex pl-10 dark:bg-black min-h-screen max-lg:justify-center ">
-        <div className="">
+        <DotPattern
+        glow={true}
+        className={cn(
+          "[mask-image:radial-gradient(300px_circle_at_center,white,transparent)]",
+        )}
+      />
+        <div className=" z-10">
           <h1 className=" mt-20 mb-0 font-extrabold text-5xl dark:text-white">
             A DeFi hub on {''}
             <AuroraText>Stellar</AuroraText>
@@ -44,11 +52,11 @@ export default function HomePage() {
           </div>
         </div>
         <div>
-            <Globe className=' mr-0 mt-5 max-lg:hidden' />
+            <Globe className=' mr-0 mt-5 max-lg:hidden z-10' />
         </div>
       </section>
 
-      {/* Features Section */}
+     
       <section id="features" className="py-20 dark:bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -104,8 +112,13 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Tokens Section */}
-        <section id="tokens" className="py-20 bg-gray-100 dark:bg-gray-800">
+      
+      <section id="tokens" className="py-20 dark:bg-black">
+        <DotPattern
+        className={cn(
+          "[mask-image:radial-gradient(300px_circle_at_center,white,transparent)]",
+        )}
+      />
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold mb-4 dark:text-white">
@@ -147,7 +160,7 @@ export default function HomePage() {
       <footer id="about" className="dark:bg-black text-white py-16">
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid md:grid-cols-4 gap-8 mb-12">
-            {/* Logo & Description */}
+            
             <div className="md:col-span-1">
               <div className="flex items-center mb-4">
                 <div className="w-10 h-10 bg-pink-500 rounded-full flex items-center justify-center">
@@ -163,7 +176,7 @@ export default function HomePage() {
             </div>
 
             
-            {/* Resources Links */}
+           
             <div>
               <h4 className="text-lg font-semibold text-blue-600 mb-4">
                 Resources
