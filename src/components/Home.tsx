@@ -9,11 +9,12 @@ import {
 import Image from 'next/image'
 import { MarqueeSlide } from './ReviewCard'
 import { TypingAnimation } from "@/components/magicui/typing-animation";
+import { Globe } from "@/components/magicui/globe";
 
 export default function HomePage() {
   return (
     <div className="  min-h-screen dark:bg-gradient-to-bl dark:from-blue-800 dark:via-blue-900 dark:to-gray-900">
-      <section className=" flex pl-10 dark:bg-black ">
+      <section className=" flex pl-10 dark:bg-black min-h-screen max-lg:justify-center ">
         <div className="">
           <h1 className=" mt-20 mb-0 font-extrabold text-5xl dark:text-white">
             A DeFi hub on {''}
@@ -41,6 +42,9 @@ export default function HomePage() {
               View Portfolio
             </RainbowButton>
           </div>
+        </div>
+        <div>
+            <Globe className=' mr-0 mt-5 max-lg:hidden' />
         </div>
       </section>
 
