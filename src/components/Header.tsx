@@ -4,6 +4,7 @@ import Image from "next/image"
 import ThemeToggle from "./ThemeToggle"
 import { Button } from "./ui/button"
 import { ScrollProgress } from "@/components/magicui/scroll-progress";
+import DropdownMenuButton from "./DropdownMenu"
 
 export default function HeaderSection() {
   return (
@@ -15,15 +16,20 @@ export default function HeaderSection() {
                       Blendify
                   </h1>
               </Link>
-              <Link href={'/swap'} className=" text-gray-600 active:text-blue-600 dark:text-slate-100">Swap</Link>
-              <Link href={'/supply'} className=" text-gray-600 active:text-blue-600 dark:text-slate-100">Supply</Link>
-              <Link href={'/borrow'} className=" text-gray-600 active:text-blue-600 dark:text-slate-100">Borrow</Link>
-              <Link href={'/stake'} className=" text-gray-600 active:text-blue-600 dark:text-slate-100">Stake</Link>
-              <Link href={'/portfolio'} className=" text-gray-600 active:text-blue-600 dark:text-slate-100">Portfolio</Link>
+              <div className=" flex justify-around gap-4 text-lg font-bold max-sm:hidden max-lg:text-sm max-lg:gap-2">
+                  <Link href={'/swap'} className=" text-gray-600 active:text-blue-600 dark:text-slate-100">Swap</Link>
+                  <Link href={'/supply'} className=" text-gray-600 active:text-blue-600 dark:text-slate-100">Supply</Link>
+                  <Link href={'/borrow'} className=" text-gray-600 active:text-blue-600 dark:text-slate-100">Borrow</Link>
+                  <Link href={'/stake'} className=" text-gray-600 active:text-blue-600 dark:text-slate-100">Stake</Link>
+                  <Link href={'/portfolio'} className=" text-gray-600 active:text-blue-600 dark:text-slate-100">Portfolio</Link>
+              </div>
           </div>
           <div className=" flex items-center">
+            <span className=" cursor-pointer">
+                <ThemeToggle />
+            </span>
               <Button className=" bg-blue-600 dark:bg-blue-400 hover:bg-blue-400">Connect Freighter</Button>
-              <ThemeToggle />
+              <span className=" sm:hidden ml-2"><DropdownMenuButton/></span>
           </div>
           <ScrollProgress className=" top-15" />
     </nav>
