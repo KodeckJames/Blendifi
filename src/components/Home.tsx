@@ -12,10 +12,11 @@ import { TypingAnimation } from "@/components/magicui/typing-animation";
 import { Globe } from "@/components/magicui/globe";
 import { cn } from "@/lib/utils";
 import { DotPattern } from "@/components/magicui/dot-pattern";
+import AnimatedBeamSection from './AnimatedBeam'
 
 export default function HomePage() {
   return (
-    <div className="  min-h-screen dark:bg-gradient-to-bl dark:from-blue-800 dark:via-blue-900 dark:to-gray-900">
+    <div className="  min-h-screen">
       <section className=" flex pl-10 dark:bg-black min-h-screen max-lg:justify-center ">
         <DotPattern
         glow={true}
@@ -56,6 +57,9 @@ export default function HomePage() {
         </div>
       </section>
 
+      <section className=' dark:bg-black'>
+            <AnimatedBeamSection/>
+      </section>
      
       <section id="features" className="py-20 dark:bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
