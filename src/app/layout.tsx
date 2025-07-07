@@ -3,6 +3,9 @@ import { Geist, Geist_Mono } from 'next/font/google'
 import './globals.css'
 import HeaderSection from '@/components/Header'
 import { ThemeProvider } from '@/components/ThemeProviders'
+import {
+  ClerkProvider,
+} from '@clerk/nextjs'
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -25,22 +28,24 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen`}
-      >
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
+    <ClerkProvider>
+      <html lang="en" suppressHydrationWarning>
+        <body
+          className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen`}
         >
-          <div className="min-h-screen">
-            <HeaderSection />
-            <main className=' dark:!bg-black bg-gradient-to-br from-blue-100 via-blue-300 to-blue-500 min-h-screen '>{children}</main>
-          </div>
-        </ThemeProvider>
-      </body>
-    </html> 
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+            <div className="min-h-screen">
+              <HeaderSection />
+              <main className=' dark:!bg-black bg-gradient-to-br from-blue-100 via-blue-300 to-blue-500 min-h-screen '>{children}</main>
+            </div>
+          </ThemeProvider>
+        </body>
+      </html>
+    </ClerkProvider>
   )
 }
