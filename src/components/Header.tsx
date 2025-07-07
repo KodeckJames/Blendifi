@@ -37,9 +37,7 @@ export default function HeaderSection() {
             <span className=" cursor-pointer">
                 <ThemeToggle />
               </span>
-              <SignedIn>
-                  <UserButton/>
-              </SignedIn>
+              
               <SignedOut>
                   <SignInButton mode="modal">
                       <ShimmerButton shimmerSize="0.09em" className=" bg-blue-600 text-white dark:text-white mr-2" >Sign In</ShimmerButton>
@@ -50,7 +48,10 @@ export default function HeaderSection() {
               <span className=" sm:hidden ml-2">
                   <Wallet xlinkTitle="Connect Wallet" color="blue"/>
               </span>
-              <span className=" lg:hidden ml-2"><DropdownMenuButton/></span>
+              <span className=" lg:hidden ml-2"><DropdownMenuButton /></span>
+              <SignedIn>
+                  <span className=" ml-2"><UserButton/></span>
+              </SignedIn>
           </div>
           <ScrollProgress className=" top-15" />
     </nav>
