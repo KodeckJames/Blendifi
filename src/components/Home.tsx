@@ -29,7 +29,7 @@ export default function HomePage() {
             <AuroraText>Stellar</AuroraText>
           </h1>
           <h1
-            className=" text-4xl font-extrabold dark:text-white
+            className=" text-3xl sm:text-4xl max-sm:mx-2  font-extrabold dark:text-white
       "
           >
             That allows you to:
