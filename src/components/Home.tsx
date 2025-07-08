@@ -83,7 +83,7 @@ export default function HomePage() {
               <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mb-4">
                 <span className="text-white text-xl">⇄</span>
               </div>
-              <h3 className="text-xl font-bold mb-2">Swap</h3>
+              <h3 className="text-xl dark:text-white font-bold mb-2">Swap</h3>
               <p className="text-gray-600 dark:text-gray-300">
                 Instantly swap between supported tokens with minimal fees
               </p>
@@ -93,7 +93,7 @@ export default function HomePage() {
               <div className="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center mb-4">
                 <span className="text-white text-xl">+</span>
               </div>
-              <h3 className="text-xl font-bold mb-2">Supply</h3>
+              <h3 className="text-xl dark:text-white font-bold mb-2">Supply</h3>
               <p className="text-gray-600 dark:text-gray-300">
                 Earn competitive yields by supplying tokens to liquidity pools
               </p>
@@ -103,7 +103,7 @@ export default function HomePage() {
               <div className="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mb-4">
                 <span className="text-white text-xl">↓</span>
               </div>
-              <h3 className="text-xl font-bold mb-2">Borrow</h3>
+              <h3 className="text-xl dark:text-white font-bold mb-2">Borrow</h3>
               <p className="text-gray-600 dark:text-gray-300">
                 Access instant liquidity by borrowing against your collateral
               </p>
@@ -113,7 +113,7 @@ export default function HomePage() {
               <div className="w-12 h-12 bg-orange-600 rounded-lg flex items-center justify-center mb-4">
                 <span className="text-white text-xl">★</span>
               </div>
-              <h3 className="text-xl font-bold mb-2">Stake</h3>
+              <h3 className="text-xl dark:text-white font-bold mb-2">Stake</h3>
               <p className="text-gray-600 dark:text-gray-300">
                 Stake tokens to earn rewards and help secure the network
               </p>
@@ -212,19 +212,14 @@ export default function HomePage() {
           <div className="grid md:grid-cols-4 gap-8 mb-12">
             <div className="md:col-span-1">
               <div className="flex items-center mb-4">
-                <div className="w-10 h-10 bg-pink-500 rounded-full flex items-center justify-center">
-                  <Image
-                    src={'/images/blendify_logo.png'}
-                    alt="blendify_logo"
-                    height={40}
-                    width={40}
-                    className=" rounded-full"
-                    quality={100}
-                  />
+                <div className="w-10 h-10 ml-5 flex items-center justify-center">
+                 <Link href={'/'} className=" flex flex-row gap-1">
+                  <Image src={'/images/blendify_logo.png'} alt="blendify_logo" height={40} width={40} className=" rounded-full" quality={100}/>
+                  <h1 className=" flex font-extrabold text-lg text-blue-600 hover:shadow-purple-500 items-center dark:text-blue-400">
+                      Blendify
+                  </h1>
+              </Link>
                 </div>
-                <h1 className="ml-3 text-2xl font-bold text-blue-600">
-                  Blendify
-                </h1>
               </div>
               <p className="text-black dark:text-white leading-relaxed">
                 Enabling Swaping, Supply, Borrowing and Staking of tokens
@@ -266,7 +261,7 @@ export default function HomePage() {
                   href="https://x.com/Lady_Hygeia"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 bg-blue-600 hover:bg-pink-600 rounded-full flex items-center justify-center cursor-pointer transition-colors"
+                  className="w-10 h-10 bg-blue-600 hover:bg-blue-400 rounded-full flex items-center justify-center cursor-pointer transition-colors"
                 >
                   <Twitter className="w-5 h-5" />
                 </a>
