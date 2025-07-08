@@ -21,7 +21,7 @@ export default function HeaderSection() {
           <div className=" flex flex-row items-center gap-4 ml-2">
               <Link href={'/'} className=" flex flex-row gap-1">
                   <Image src={'/images/blendify_logo.png'} alt="blendify_logo" height={40} width={40} className=" rounded-full" quality={100}/>
-                  <h1 className=" flex font-extrabold text-lg text-blue-600 hover:shadow-purple-500 items-center dark:text-blue-400">
+                  <h1 className=" flex font-extrabold text-lg max-sm:text-sm text-blue-600 hover:shadow-purple-500 items-center dark:text-blue-400">
                       Blendify
                   </h1>
               </Link>
