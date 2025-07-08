@@ -34,7 +34,7 @@ export default function HeaderSection() {
               </div>
           </div>
           <div className=" flex items-center">
-            <span className=" cursor-pointer">
+            <span className=" cursor-pointer max-sm:ml-2">
                 <ThemeToggle />
               </span>
               
