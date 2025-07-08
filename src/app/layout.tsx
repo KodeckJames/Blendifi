@@ -79,9 +79,9 @@ export const metadata: Metadata = {
   // },
 
   icons: {
-    icon: '/images/Blendify.png',
-    shortcut: '/images/Blendify.png',
-    apple: '/images/Blendify.png', // optional
+    icon: '/images/blendify.jpeg',
+    shortcut: '/images/blendify.jpeg',
+    apple: '/images/blendify.jpeg', // optional
   },
 
   // alternates: {
