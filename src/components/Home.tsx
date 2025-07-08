@@ -39,7 +39,7 @@ export default function HomePage() {
             texts={['Swap', 'Supply', 'Borrow', 'Stake']}
           />
           <VelocityScroll
-            className=" text-xl max-w-96"
+            className=" text-xl max-w-96 max-sm:w-0.5 max-sm:mx-2"
             defaultVelocity={3}
             numRows={1}
           >
