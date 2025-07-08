@@ -23,7 +23,7 @@ export default function HomePage() {
             '[mask-image:radial-gradient(300px_circle_at_center,white,transparent)]'
           )}
         />
-        <div className=" z-10">
+        <div className=" max-sm:flex max-sm:justify-center z-10">
           <h1 className=" mt-20 mb-0 font-extrabold text-3xl sm:text-5xl max-sm:mx-2 dark:text-white">
             A DeFi hub on {''}
             <AuroraText>Stellar</AuroraText>
