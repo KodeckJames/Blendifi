@@ -24,7 +24,7 @@ export default function HomePage() {
           )}
         />
         <div className=" z-10">
-          <h1 className=" mt-20 mb-0 font-extrabold text-5xl max-sm:text-xl dark:text-white">
+          <h1 className=" mt-20 mb-0 font-extrabold text-4xl sm:text-5xl dark:text-white">
             A DeFi hub on {''}
             <AuroraText>Stellar</AuroraText>
           </h1>
