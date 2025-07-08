@@ -53,7 +53,7 @@ export default function HeaderSection() {
                   <span className=" ml-2"><UserButton/></span>
               </SignedIn>
           </div>
-          <ScrollProgress className=" top-15" />
+          <ScrollProgress className=" top-16" />
     </nav>
   )
 }
