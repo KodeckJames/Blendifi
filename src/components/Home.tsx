@@ -11,6 +11,7 @@ import { Globe } from '@/components/magicui/globe'
 import { cn } from '@/lib/utils'
 import { DotPattern } from '@/components/magicui/dot-pattern'
 import AnimatedBeamSection from './AnimatedBeam'
+import Link from 'next/link'
 
 export default function HomePage() {
   return (
@@ -50,10 +51,10 @@ export default function HomePage() {
           </VelocityScroll>
           <div className=" flex justify-between gap-20 mt-8">
             <RainbowButton className=" !bg-blue-600 dark:text-black p-6 rounded-full text-lg ">
-              Start Trading
+              <Link href={'/swap'}>Start Trading</Link>
             </RainbowButton>
             <RainbowButton className=" !bg-blue-600 dark:text-black p-6 rounded-full text-lg ">
-              View Portfolio
+              <Link href={'/portfolio'}>View portfolio</Link>
             </RainbowButton>
           </div>
         </div>
