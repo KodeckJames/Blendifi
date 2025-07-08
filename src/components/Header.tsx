@@ -19,9 +19,9 @@ export default function HeaderSection() {
   return (
       <nav className=" sticky top-0 z-50 shadow-2xl bg-blue-100 dark:bg-black flex flex-row justify-between items-center px-4 py-2">
           <div className=" flex flex-row items-center gap-4 ml-2">
-              <Link href={'/'} className=" flex flex-row gap-1">
+              <Link href={'/'} className=" flex flex-row gap-1 max-sm:ml-0">
                   <Image src={'/images/blendify_logo.png'} alt="blendify_logo" height={40} width={40} className=" rounded-full" quality={100}/>
-                  <h1 className=" flex font-extrabold text-lg max-sm:text-sm text-blue-600 hover:shadow-purple-500 items-center dark:text-blue-400">
+                  <h1 className=" flex font-extrabold text-lg text-blue-600 hover:shadow-purple-500 items-center dark:text-blue-400">
                       Blendify
                   </h1>
               </Link>
