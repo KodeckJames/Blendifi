@@ -1,3 +1,5 @@
+![image](https://github.com/user-attachments/assets/b8951e61-788f-443d-b7b0-1a83392a16da)
+
 🌌 Blendify – The Stellar DeFi Hub
 
 **Blendify** is a modern decentralized finance (DeFi) platform built on the Stellar network. It allows users to **swap, supply, borrow, and stake** major tokens such as `XLM`, `BLND`, `USDC`, `wETH`, and `wBTC`. The app is built with a beautiful, responsive UI powered by **Next.js**, **Tailwind CSS**, **ShadCN**, and **Clerk authentication**.
