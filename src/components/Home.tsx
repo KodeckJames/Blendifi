@@ -49,7 +49,7 @@ export default function HomePage() {
             <span className=" text-orange-600"> wETH</span>{'  '}
             <span className=" text-yellow-400"> wBTC</span>
           </VelocityScroll>
-          <div className=" flex justify-between max-sm:w-screen max-sm:mx-auto gap-20 max-sm:gap-2 mt-8">
+          <div className=" flex justify-between max-sm:max-w-screen max-sm:mx-auto gap-20 max-sm:gap-2 mt-8">
             <RainbowButton className=" !bg-blue-600 dark:text-black p-6 rounded-full text-lg ">
               <Link href={'/swap'}>Start Trading</Link>
             </RainbowButton>
