@@ -15,12 +15,12 @@ const geistMono = Geist_Mono({
   subsets: ['latin'],
 })
 
-// const defaultUrl = process.env.VERCEL_URL
-  // ? `https://hygeia-starknet.vercel.app`
-//   : 'http://localhost:3000'
+const defaultUrl = process.env.VERCEL_URL
+  ? `https://blendify-kappa.vercel.app/`
+  : 'http://localhost:3000'
 
 export const metadata: Metadata = {
-  // metadataBase: new URL(defaultUrl),
+  metadataBase: new URL(defaultUrl),
   title: 'Blendify',
   description:
     'Blendify is a modern DeFi platform built on the Stellar network that lets you swap, supply, borrow, and stake crypto assets like XLM, BLND, USDC, wETH, and wBTC—all in one secure, user-friendly interface.',
@@ -55,11 +55,11 @@ export const metadata: Metadata = {
     title: 'Blendify - A modern DeFi hub',
     description:
       'A modern DeFi platform built on the Stellar network that lets you swap, supply, borrow, and stake crypto assets like XLM, BLND, USDC, wETH, and wBTC—all in one secure, user-friendly interface.',
-    // url: 'https://hygeia-starknet.vercel.app',
+    url: 'https://blendify-kappa.vercel.app/',
     siteName: 'Blendify',
     images: [
       {
-        url: '/images/Blendify.png', // Ensure this path works in prod
+        url: '/images/blendify.jpeg', // Ensure this path works in prod
         width: 1200,
         height: 630,
         alt: 'Blendify Logo',
@@ -69,24 +69,24 @@ export const metadata: Metadata = {
     type: 'website',
   },
 
-  // twitter: {
-  //   card: 'summary_large_image',
-  //   title: 'Hygeia - Menstrual Health on the Blockchain',
-  //   description:
-  //     'Making menstrual products more accessible, affordable, and transparent for girls across Kenya.',
-  //   images: ['/images/logo.png'],
-  //   creator: 'https://x.com/JJ638055109535', // optional if you have a Twitter/X handle
-  // },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Blendify - A DeFi hub on Stellat that allows you to swap, supply, borrow and stake tokens',
+    description:
+      'A DeFi hub on Stellat that allows you to swap, supply, borrow and stake tokens.',
+    images: ['/images/logo.png'],
+    creator: 'https://x.com/JJ638055109535', // optional if you have a Twitter/X handle
+  },
 
   icons: {
-    icon: '/images/blendify_logo.png',
+    icon: '/images/blendify.jpeg',
     shortcut: '/images/blendify.jpeg',
     apple: '/images/blendify.jpeg', // optional
   },
 
-  // alternates: {
-  //   canonical: 'https://hygeia-starknet.vercel.app',
-  // },
+  alternates: {
+    canonical: 'https://blendify-kappa.vercel.app/',
+  },
 }
 
 export default function RootLayout({
