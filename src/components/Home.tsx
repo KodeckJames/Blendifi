@@ -16,7 +16,7 @@ import Link from 'next/link'
 export default function HomePage() {
   return (
     <div className="  min-h-screen">
-      <section className=" flex pl-10 dark:bg-black min-h-screen max-lg:justify-center ">
+      <section className=" flex sm:pl-10 dark:bg-black min-h-screen max-lg:justify-center ">
         <DotPattern
           glow={true}
           className={cn(
