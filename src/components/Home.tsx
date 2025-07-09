@@ -53,7 +53,7 @@ export default function HomePage() {
             <RainbowButton className=" !bg-blue-600 dark:text-black p-6 rounded-full text-lg ">
               <Link href={'/swap'}>Start Trading</Link>
             </RainbowButton>
-            <RainbowButton className=" !bg-blue-600 dark:text-black p-6 max-sm:mr-10 rounded-full text-lg ">
+            <RainbowButton className=" !bg-blue-600 dark:text-black p-6 max-sm:mr-14 rounded-full text-lg ">
               <Link href={'/portfolio'}>View portfolio</Link>
             </RainbowButton>
           </div>
