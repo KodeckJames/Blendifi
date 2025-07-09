@@ -17,7 +17,7 @@ import { Wallet } from "lucide-react"
 export default function HeaderSection() {
     
   return (
-      <nav className=" sticky top-0 z-50 shadow-2xl bg-blue-100 dark:bg-black flex flex-row justify-between items-center px-4 py-2">
+      <nav className=" sticky top-0 z-50 shadow-2xl bg-blue-100 dark:bg-black flex flex-row justify-between items-center px-4 max-sm:px-1 py-2">
           <div className=" flex flex-row items-center gap-4 ml-2">
               <Link href={'/'} className=" flex flex-row gap-1 max-sm:ml-0">
                   <Image src={'/images/blendify_logo.png'} alt="blendify_logo" height={40} width={40} className=" rounded-full" quality={100}/>
@@ -50,7 +50,7 @@ export default function HeaderSection() {
               </span>
               <span className=" lg:hidden ml-2"><DropdownMenuButton /></span>
               <SignedIn>
-                  <span className=" ml-2"><UserButton/></span>
+                  <span className=" ml-2 flex justify-center items-center"><UserButton/></span>
               </SignedIn>
           </div>
           <ScrollProgress className=" top-16" />
