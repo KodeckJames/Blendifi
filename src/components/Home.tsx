@@ -53,7 +53,7 @@ export default function HomePage() {
             <RainbowButton className=" !bg-blue-600 dark:text-black p-6 rounded-full text-lg ">
               <Link href={'/swap'}>Start Trading</Link>
             </RainbowButton>
-            <RainbowButton className=" !bg-blue-600 dark:text-black p-6 max-sm:mr-6 rounded-full text-lg ">
+            <RainbowButton className=" !bg-blue-600 dark:text-black p-6 max-sm:mr-10 rounded-full text-lg ">
               <Link href={'/portfolio'}>View portfolio</Link>
             </RainbowButton>
           </div>
@@ -202,7 +202,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className=" grid justify-items-center dark:bg-white bg-white">
+      <section className=" grid justify-items-center dark:bg-white bg-white max-w-screen">
         <TypingAnimation>Customer Reviews</TypingAnimation>
         <MarqueeSlide />
       </section>
