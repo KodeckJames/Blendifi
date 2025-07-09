@@ -59,7 +59,7 @@ export const metadata: Metadata = {
     siteName: 'Blendify',
     images: [
       {
-        url: '/images/blendify.jpeg', // Ensure this path works in prod
+        url: '/images/blendify2.png', // Ensure this path works in prod
         width: 1200,
         height: 630,
         alt: 'Blendify Logo',
@@ -73,15 +73,15 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Blendify - A DeFi hub on Stellat that allows you to swap, supply, borrow and stake tokens',
     description:
-      'A DeFi hub on Stellat that allows you to swap, supply, borrow and stake tokens.',
-    images: ['/images/logo.png'],
+      'A DeFi hub on Stellar that allows you to swap, supply, borrow and stake tokens.',
+    images: ['/images/blendify2.png'],
     creator: 'https://x.com/JJ638055109535', // optional if you have a Twitter/X handle
   },
 
   icons: {
-    icon: '/images/blendify.jpeg',
-    shortcut: '/images/blendify.jpeg',
-    apple: '/images/blendify.jpeg', // optional
+    icon: '/images/blendify2.png',
+    shortcut: '/images/blendify2.png',
+    apple: '/images/blendify2.png', // optional
   },
 
   alternates: {
