@@ -79,7 +79,7 @@ export const metadata: Metadata = {
   // },
 
   icons: {
-    icon: '/images/blendify.jpeg',
+    icon: '/images/blendify_logo.png',
     shortcut: '/images/blendify.jpeg',
     apple: '/images/blendify.jpeg', // optional
   },
