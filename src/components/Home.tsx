@@ -24,12 +24,12 @@ export default function HomePage() {
           )}
         />
         <div className=" z-10">
-          <h1 className=" mt-20 mb-0 font-extrabold text-3xl sm:text-5xl max-sm:mx-2 dark:text-white">
+          <h1 className=" mt-20 mb-0 font-extrabold text-3xl sm:text-5xl dark:text-white">
             A DeFi hub on {''}
             <AuroraText>Stellar</AuroraText>
           </h1>
           <h1
-            className=" text-3xl sm:text-4xl max-sm:mx-2  font-extrabold dark:text-white
+            className=" text-3xl sm:text-4xl font-extrabold dark:text-white
       "
           >
             That allows you to:
@@ -49,11 +49,11 @@ export default function HomePage() {
             <span className=" text-orange-600"> wETH</span>{'  '}
             <span className=" text-yellow-400"> wBTC</span>
           </VelocityScroll>
-          <div className=" flex justify-between max-sm:max-w-screen max-sm:justify-start gap-20 max-sm:gap-2 mt-8">
+          <div className=" flex justify-between max-sm:max-w-screen gap-20 max-sm:gap-2 mt-8">
             <RainbowButton className=" !bg-blue-600 dark:text-black p-6 rounded-full text-lg ">
               <Link href={'/swap'}>Start Trading</Link>
             </RainbowButton>
-            <RainbowButton className=" !bg-blue-600 dark:text-black p-6 max-sm:mr-14 rounded-full text-lg ">
+            <RainbowButton className=" !bg-blue-600 dark:text-black p-6 rounded-full text-lg ">
               <Link href={'/portfolio'}>View portfolio</Link>
             </RainbowButton>
           </div>
