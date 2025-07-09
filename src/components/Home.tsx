@@ -202,7 +202,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className=" grid justify-items-center dark:bg-white bg-white max-w-screen">
+      <section className=" grid justify-items-center dark:bg-white bg-white">
         <TypingAnimation>Customer Reviews</TypingAnimation>
         <MarqueeSlide />
       </section>
